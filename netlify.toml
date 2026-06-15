@@ -1,0 +1,9 @@
+# Netlify build config for Byahe ni Shane at Hazel
+#
+# Before publishing, Netlify runs `node generate-manifest.js`, which scans
+# images/<slot-id>/ and writes images/manifest.json. folder-images.js reads
+# that manifest in the browser, so any image you commit shows up permanently —
+# no live directory listing needed.
+[build]
+  command = "node generate-manifest.js"
+  publish = "."

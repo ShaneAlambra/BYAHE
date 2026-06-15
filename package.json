@@ -1,0 +1,9 @@
+{
+  "name": "byahe-ni-shane-at-hazel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Byahe ni Shane at Hazel — motorcycle travel site",
+  "scripts": {
+    "build": "node generate-manifest.js"
+  }
+}
