@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; }
+    @keyframes bnsh-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+    .bnsh-link { color: #3B2D20 !important; border-bottom: 2px solid transparent; }
+    .bnsh-link:hover { color: #C2532F !important; border-bottom: 2px solid #C2532F; }
+    .bnsh-map-svg { cursor: grab; touch-action: none; }
+    .bnsh-map-svg:active { cursor: grabbing; }
+  </style>
+  <script src="image-slot.js"></script>
+</helmet>
+
+<div id="top" style="font-family: Karla, sans-serif; color: #3B2D20; background-color: #FAF4E6; background-image: radial-gradient(#E9DCC2 1px, transparent 1px); background-size: 26px 26px; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- ===== NAV ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top" data-screen-label="Nav" style="background: rgba(250,244,230,0.94); backdrop-filter: blur(8px); border-bottom: 2px dashed #D8C9A8; z-index: 50;">
+    <div class="container">
+      <a class="navbar-brand" href="#top" style="font-family: Caveat, cursive; font-weight: 700; font-size: 26px; color: #C2532F;">Byahe ni Shane at Hazel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bnshNav" aria-controls="bnshNav" aria-expanded="false" aria-label="Toggle navigation" style="border: 2px solid #C2532F;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bnshNav">
+        <div class="navbar-nav ms-auto align-items-lg-center" style="gap: 6px; font-size: 14px; font-weight: 600;">
+          <a class="nav-link bnsh-link" href="#kami">About Us</a>
+          <a class="nav-link bnsh-link" href="#mapa">Map</a>
+          <a class="nav-link bnsh-link" href="#byahe">Our Rides</a>
+          <a class="nav-link bnsh-link" href="#gallery">Gallery</a>
+          <a class="nav-link bnsh-link" href="#kwento">Stories</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header data-screen-label="Hero" class="container" style="padding-top: clamp(40px,6vw,72px); padding-bottom: clamp(56px,8vw,96px);">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div style="font-family: Caveat, cursive; font-size: clamp(26px,5vw,34px); color: #B98A2F; transform: rotate(-2deg); margin-bottom: 4px;">the long rides of...</div>
+        <h1 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(46px,9vw,76px); line-height: 0.98; margin: 0 0 20px; letter-spacing: -1px;">Shane <span style="color: #C2532F;">&amp;</span> Hazel</h1>
+        <p style="font-size: clamp(16px,2.4vw,18px); line-height: 1.65; max-width: 460px; margin: 0 0 28px; text-wrap: pretty;">Two people, one motorcycle, and the Philippines unfolding one long ride at a time. This is where we keep the stories, photos, and kilometers from every trip we take together.</p>
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+          <a href="#gallery" style="display: inline-block; background: #C2532F; color: #FAF4E6; font-weight: 700; font-size: 15px; padding: 14px 26px; border-radius: 999px; text-decoration: none; box-shadow: 0 4px 0 #8E3A1F;" style-hover="transform: translateY(-2px); box-shadow: 0 6px 0 #8E3A1F;">See our rides ↓</a>
+          <div style="font-family: Caveat, cursive; font-size: 22px; font-weight: 600; color: #3B2D20; background: #F4D58D; padding: 6px 16px; border-radius: 4px; transform: rotate(2deg); box-shadow: 2px 2px 0 rgba(59,45,32,0.15);">Honda ADV 160 · since January 2025</div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div style="position: relative; width: 330px; max-width: 100%; margin: 0 auto;">
+          <div style="position: absolute; top: 18px; left: -26px; width: 250px; height: 300px; background: #fff; padding: 10px; box-shadow: 0 8px 24px rgba(59,45,32,0.18); transform: rotate(-7deg);"></div>
+          <div style="position: absolute; top: 8px; right: -22px; width: 250px; height: 300px; background: #fff; padding: 10px; box-shadow: 0 8px 24px rgba(59,45,32,0.18); transform: rotate(6deg);"></div>
+          <figure style="position: relative; margin: 0; background: #fff; padding: 14px 14px 58px; box-shadow: 0 14px 34px rgba(59,45,32,0.25); transform: rotate(-1.5deg); width: 100%;">
+            <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%) rotate(-3deg); width: 110px; height: 30px; background: rgba(242,182,160,0.85); box-shadow: 0 1px 3px rgba(59,45,32,0.15);"></div>
+            <image-slot id="hero-photo" shape="rect" placeholder="Drop your favorite photo here ✦" style="width: 100%; height: 360px; display: block;"></image-slot>
+            <figcaption style="font-family: Caveat, cursive; font-size: 24px; text-align: center; margin-top: 12px; color: #3B2D20;">this is us! ♡</figcaption>
+          </figure>
+          <div style="position: absolute; bottom: -34px; right: -18px; width: 104px; height: 104px; border-radius: 50%; background: #2F6F5E; color: #FAF4E6; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(10deg); box-shadow: 0 6px 16px rgba(59,45,32,0.25); text-align: center;">
+            <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; line-height: 1;">11</div>
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 3px;">destinations<br>so far!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== ABOUT US ===== -->
+  <section id="kami" data-screen-label="About Us" style="background: #fff; border-top: 2px dashed #D8C9A8; border-bottom: 2px dashed #D8C9A8;">
+    <div class="container" style="padding-top: clamp(56px,8vw,80px); padding-bottom: clamp(56px,8vw,80px);">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div style="display: flex; gap: 20px; align-items: flex-start; justify-content: center;">
+            <figure style="margin: 0; background: #FAF4E6; padding: 10px 10px 36px; box-shadow: 0 8px 20px rgba(59,45,32,0.16); transform: rotate(-3deg); flex: 1; max-width: 200px;">
+              <image-slot id="kami-photo" shape="rect" placeholder="A photo of us ✦" style="width: 100%; height: 220px; display: block;"></image-slot>
+              <figcaption style="font-family: Caveat, cursive; font-size: 20px; text-align: center; margin-top: 8px;">Shane &amp; Hazel</figcaption>
+            </figure>
+            <figure style="margin: 36px 0 0; background: #FAF4E6; padding: 10px 10px 36px; box-shadow: 0 8px 20px rgba(59,45,32,0.16); transform: rotate(3.5deg); flex: 1; max-width: 200px;">
+              <image-slot id="motor-photo" shape="rect" placeholder="A photo of the bike ✦" style="width: 100%; height: 220px; display: block;"></image-slot>
+              <figcaption style="font-family: Caveat, cursive; font-size: 20px; text-align: center; margin-top: 8px;">our trusty ADV</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div style="font-family: Caveat, cursive; font-size: 28px; color: #C2532F; transform: rotate(-1deg); display: inline-block;">get to know us</div>
+          <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px,5vw,42px); margin: 6px 0 18px; letter-spacing: -0.5px;">Partners in life, partners on the road</h2>
+          <p style="font-size: clamp(15px,2.2vw,17px); line-height: 1.7; margin: 0 0 16px; text-wrap: pretty;">It all started in January 2025 when we brought home our Honda ADV 160. From short trips around the neighborhood to before-sunrise departures heading north — the rides kept getting longer, and so did the list of places we've been.</p>
+          <p style="font-size: clamp(15px,2.2vw,17px); line-height: 1.7; margin: 0; text-wrap: pretty;">For us, it was never just about the destination. It's the roadside coffee stops, the mountain wind, and having the person you love riding behind you through every long stretch of highway. <span style="background: #F4D58D; padding: 1px 6px; font-weight: 700;">These are our rides.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section data-screen-label="Stats" class="container" style="padding-top: clamp(56px,8vw,72px); padding-bottom: 36px;">
+    <div class="row g-3 row-cols-2 row-cols-md-4">
+      <div class="col">
+        <div style="background: #fff; border: 2px solid #3B2D20; border-radius: 14px; padding: 26px 18px; box-shadow: 5px 5px 0 #C2532F; text-align: center; height: 100%;" style-hover="transform: translateY(-3px);">
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px,6vw,48px); line-height: 1; color: #C2532F;">11</div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-top: 8px;">Destinations</div>
+        </div>
+      </div>
+      <div class="col">
+        <div style="background: #fff; border: 2px solid #3B2D20; border-radius: 14px; padding: 26px 18px; box-shadow: 5px 5px 0 #2F6F5E; text-align: center; height: 100%;" style-hover="transform: translateY(-3px);">
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px,6vw,48px); line-height: 1; color: #2F6F5E;">6</div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-top: 8px;">Provinces</div>
+        </div>
+      </div>
+      <div class="col">
+        <div style="background: #fff; border: 2px solid #3B2D20; border-radius: 14px; padding: 26px 18px; box-shadow: 5px 5px 0 #E2A23B; text-align: center; height: 100%;" style-hover="transform: translateY(-3px);">
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px,6vw,48px); line-height: 1; color: #B98A2F;">{{ totalKm }}</div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-top: 8px;">Kilometers</div>
+        </div>
+      </div>
+      <div class="col">
+        <div style="background: #fff; border: 2px solid #3B2D20; border-radius: 14px; padding: 26px 18px; box-shadow: 5px 5px 0 #3B2D20; text-align: center; height: 100%;" style-hover="transform: translateY(-3px);">
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px,6vw,48px); line-height: 1;">1</div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-top: 8px;">Bike · ADV 160</div>
+        </div>
+      </div>
+    </div>
+    <div style="font-family: Caveat, cursive; font-size: 22px; color: #8A7657; text-align: center; margin-top: 18px; transform: rotate(-1deg);">…and many more kilometers to come ✦</div>
+  </section>
+
+  <!-- ===== MAP ===== -->
+  <section id="mapa" data-screen-label="Map" class="container" style="padding-top: clamp(40px,6vw,56px); padding-bottom: clamp(56px,8vw,80px);">
+    <div style="text-align: center; margin-bottom: 32px;">
+      <div style="font-family: Caveat, cursive; font-size: 28px; color: #C2532F;">where have we been so far?</div>
+      <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px,5vw,44px); margin: 4px 0 0; letter-spacing: -0.5px;">The Ride Map</h2>
+      <p style="font-size: 16px; color: #8A7657; margin: 10px 0 0;">The whole Philippines — drag to pan, zoom in, and tap a pin to see the stop.</p>
+    </div>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div style="position: relative; background: #DCE9E2; border: 2px solid #3B2D20; border-radius: 18px; box-shadow: 6px 6px 0 rgba(59,45,32,0.2); overflow: hidden;">
+          <div style="position: absolute; top: 12px; left: 16px; z-index: 2; font-family: Caveat, cursive; font-size: 20px; color: #2F6F5E; font-weight: 600; pointer-events: none;">PHILIPPINES</div>
+          <div style="position: absolute; top: 12px; right: 12px; z-index: 3; display: flex; flex-direction: column; gap: 6px;">
+            <button onClick="{{ zoomIn }}" aria-label="Zoom in" style="width: 38px; height: 38px; border: 2px solid #3B2D20; background: #fff; border-radius: 10px; font-size: 22px; font-weight: 800; line-height: 1; cursor: pointer; box-shadow: 2px 2px 0 rgba(59,45,32,0.2);" style-hover="background: #F4D58D;">+</button>
+            <button onClick="{{ zoomOut }}" aria-label="Zoom out" style="width: 38px; height: 38px; border: 2px solid #3B2D20; background: #fff; border-radius: 10px; font-size: 22px; font-weight: 800; line-height: 1; cursor: pointer; box-shadow: 2px 2px 0 rgba(59,45,32,0.2);" style-hover="background: #F4D58D;">−</button>
+            <button onClick="{{ whole }}" aria-label="Reset to whole Philippines" style="width: 38px; height: 38px; border: 2px solid #3B2D20; background: #fff; border-radius: 10px; font-size: 16px; font-weight: 800; line-height: 1; cursor: pointer; box-shadow: 2px 2px 0 rgba(59,45,32,0.2);" style-hover="background: #F4D58D;">⤾</button>
+          </div>
+          <div style="position: absolute; bottom: 12px; right: 12px; z-index: 3;">
+            <button onClick="{{ focusLuzon }}" style="border: 2px solid #C2532F; background: #C2532F; color: #FAF4E6; font-weight: 700; font-size: 13px; padding: 8px 14px; border-radius: 999px; cursor: pointer; box-shadow: 2px 2px 0 rgba(59,45,32,0.25);" style-hover="background: #8E3A1F; border-color: #8E3A1F;">⌖ Zoom to our rides</button>
+          </div>
+          <svg class="bnsh-map-svg" ref="{{ svgRef }}" viewBox="{{ vb }}" preserveAspectRatio="xMidYMid meet" onPointerDown="{{ onDown }}" onPointerMove="{{ onMove }}" onPointerUp="{{ onUp }}" onPointerLeave="{{ onUp }}" style="width: 100%; height: clamp(340px,60vw,460px); display: block;" role="img" aria-label="Map of the Philippines with markers of the places we have visited">
+            <path d="M170 55 C 200 45, 235 48, 250 70 C 258 92, 250 112, 256 132 C 266 156, 270 186, 258 212 C 250 236, 256 258, 248 276 C 262 286, 280 300, 296 318 C 308 332, 300 346, 286 340 C 270 332, 256 320, 244 306 C 232 296, 220 300, 214 288 C 206 272, 210 252, 202 240 C 190 250, 176 252, 168 244 C 158 232, 162 212, 156 198 C 148 176, 150 150, 156 128 C 150 104, 150 78, 170 55 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <path d="M150 306 C 165 300, 184 308, 182 324 C 178 340, 158 344, 148 334 C 142 326, 142 312, 150 306 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <path d="M132 322 C 140 330, 120 360, 100 392 C 86 414, 74 430, 66 426 C 60 420, 72 402, 86 378 C 104 350, 120 326, 132 322 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <path d="M196 344 C 210 340, 222 352, 216 366 C 208 378, 192 374, 188 360 C 186 350, 190 346, 196 344 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <path d="M224 360 C 236 356, 244 372, 238 388 C 232 400, 220 396, 218 382 C 216 372, 218 362, 224 360 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <path d="M246 366 C 252 364, 256 384, 252 402 C 249 412, 243 410, 242 398 C 241 384, 242 368, 246 366 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <path d="M258 396 C 268 393, 276 404, 270 414 C 263 422, 252 416, 252 406 C 252 400, 254 397, 258 396 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <path d="M272 360 C 282 356, 290 372, 284 390 C 280 400, 272 398, 270 386 C 268 374, 268 364, 272 360 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <path d="M278 338 C 292 334, 300 350, 294 364 C 289 374, 278 370, 276 358 C 275 348, 273 340, 278 338 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <path d="M214 432 C 240 422, 276 426, 300 442 C 318 456, 322 480, 312 502 C 320 516, 314 536, 296 540 C 286 552, 268 552, 258 542 C 244 548, 226 544, 220 530 C 206 528, 196 514, 200 500 C 190 486, 192 458, 214 432 Z" fill="#F6EEDB" stroke="#3B2D20" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"></path>
+            <circle cx="196" cy="250" r="3" fill="#8A7657"></circle>
+            <text x="190" y="262" font-family="Karla, sans-serif" font-size="9" font-weight="700" fill="#8A7657">Manila</text>
+            <sc-for list="{{ destinations }}" as="d" hint-placeholder-count="11">
+              <g onClick="{{ d.onSelect }}" style="cursor: pointer;">
+                <circle cx="{{ d.mx }}" cy="{{ d.my }}" r="{{ d.pinR }}" fill="{{ d.color }}" stroke="{{ d.pinStroke }}" stroke-width="{{ d.pinSW }}"></circle>
+                <text x="{{ d.mx }}" y="{{ d.textY }}" text-anchor="middle" font-family="Karla, sans-serif" font-size="8" font-weight="800" fill="#fff" style="pointer-events: none;">{{ d.n }}</text>
+                <title>{{ d.title }}</title>
+              </g>
+            </sc-for>
+          </svg>
+          <sc-if value="{{ hasSel }}" hint-placeholder-val="{{ false }}">
+            <div style="position: absolute; left: 12px; bottom: 12px; z-index: 4; background: #fff; border: 2px solid #3B2D20; border-radius: 12px; padding: 10px 14px; box-shadow: 3px 3px 0 rgba(59,45,32,0.2); max-width: 230px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
+                <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 17px;">{{ selectedDest.name }}</div>
+                <button onClick="{{ closeInfo }}" aria-label="Close" style="border: none; background: none; font-size: 20px; line-height: 1; cursor: pointer; color: #8A7657;">×</button>
+              </div>
+              <div style="font-size: 12px; color: #8A7657;">{{ selectedDest.province }}</div>
+              <div style="font-family: Caveat, cursive; font-size: 17px; color: #C2532F; margin-top: 2px;">{{ selectedDest.caption }}</div>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 0;">
+          <sc-for list="{{ destinations }}" as="d" hint-placeholder-count="11">
+            <div onClick="{{ d.onSelect }}" style="display: flex; align-items: center; gap: 14px; padding: 10px 14px; border-bottom: 1px dashed #D8C9A8; cursor: pointer; background: {{ d.rowBg }}; border-radius: 8px;" style-hover="background: rgba(255,255,255,0.7);">
+              <div style="width: 26px; height: 26px; border-radius: 50%; background: {{ d.color }}; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0;">{{ d.n }}</div>
+              <div style="flex: 1;">
+                <div style="font-weight: 700; font-size: 16px;">{{ d.name }}</div>
+                <div style="font-size: 13px; color: #8A7657;">{{ d.province }}</div>
+              </div>
+              <div style="font-family: Caveat, cursive; font-size: 18px; color: #C2532F;">{{ d.caption }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE / OUR RIDES ===== -->
+  <section id="byahe" data-screen-label="Our Rides" style="background: #3B2D20; color: #FAF4E6;">
+    <div class="container" style="max-width: 900px; padding-top: clamp(56px,8vw,84px); padding-bottom: clamp(56px,8vw,84px);">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <div style="font-family: Caveat, cursive; font-size: 28px; color: #E2A23B;">the story of how far we've come</div>
+        <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px,5vw,44px); margin: 4px 0 0; letter-spacing: -0.5px;">Our Ride Timeline</h2>
+      </div>
+      <div style="position: relative; padding-left: 44px; border-left: 3px dashed #6E5A42; display: flex; flex-direction: column; gap: 40px;">
+        <div style="position: relative;">
+          <div style="position: absolute; left: -59px; top: 2px; width: 28px; height: 28px; border-radius: 50%; background: #7B5FA3; border: 3px solid #FAF4E6; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px;">1</div>
+          <div style="font-family: Caveat, cursive; font-size: 24px; color: #E2A23B;">Chapter 1 · The first getaways</div>
+          <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: clamp(22px,3.5vw,26px); margin: 4px 0 10px;">Bulacan: our training ground</h3>
+          <p style="font-size: 16px; line-height: 1.7; margin: 0 0 12px; color: #E8DCC6; text-wrap: pretty;">SJDM, San Rafael, Angat, all the way to DRT — this is where we learned to trust each other on the road. Early departures, hot coffee, and roads close to home that still felt like a real escape from the city.</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span style="background: rgba(123,95,163,0.3); border: 1px solid #7B5FA3; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">SJDM</span>
+            <span style="background: rgba(123,95,163,0.3); border: 1px solid #7B5FA3; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">San Rafael</span>
+            <span style="background: rgba(123,95,163,0.3); border: 1px solid #7B5FA3; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">Angat</span>
+            <span style="background: rgba(123,95,163,0.3); border: 1px solid #7B5FA3; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">DRT</span>
+          </div>
+        </div>
+        <div style="position: relative;">
+          <div style="position: absolute; left: -59px; top: 2px; width: 28px; height: 28px; border-radius: 50%; background: #2F6F5E; border: 3px solid #FAF4E6; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px;">2</div>
+          <div style="font-family: Caveat, cursive; font-size: 24px; color: #E2A23B;">Chapter 2 · Higher roads, braver hearts</div>
+          <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: clamp(22px,3.5vw,26px); margin: 4px 0 10px;">Marilaque, Infanta &amp; Tagaytay</h3>
+          <p style="font-size: 16px; line-height: 1.7; margin: 0 0 12px; color: #E8DCC6; text-wrap: pretty;">This is where we got our first taste of real twisties. Marilaque all the way to Infanta, and the cool Tagaytay breeze with a bowl of bulalo waiting — rides we keep coming back to, again and again.</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span style="background: rgba(47,111,94,0.3); border: 1px solid #2F6F5E; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">Marilaque</span>
+            <span style="background: rgba(47,111,94,0.3); border: 1px solid #2F6F5E; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">Infanta, Quezon</span>
+            <span style="background: rgba(47,111,94,0.3); border: 1px solid #2F6F5E; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">Tagaytay</span>
+          </div>
+        </div>
+        <div style="position: relative;">
+          <div style="position: absolute; left: -59px; top: 2px; width: 28px; height: 28px; border-radius: 50%; background: #C2532F; border: 3px solid #FAF4E6; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px;">3</div>
+          <div style="font-family: Caveat, cursive; font-size: 24px; color: #E2A23B;">Chapter 3 · The real long rides</div>
+          <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: clamp(22px,3.5vw,26px); margin: 4px 0 10px;">Heading north: Pangasinan &amp; La Union</h3>
+          <p style="font-size: 16px; line-height: 1.7; margin: 0 0 12px; color: #E8DCC6; text-wrap: pretty;">Pre-dawn departures, hundreds of kilometers, and the sea waiting at the end of the road. Bolinao, Dasol, Rosario, and San Juan — the rides that proved we can go the distance.</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span style="background: rgba(194,83,47,0.3); border: 1px solid #C2532F; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">Bolinao</span>
+            <span style="background: rgba(194,83,47,0.3); border: 1px solid #C2532F; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">Dasol</span>
+            <span style="background: rgba(194,83,47,0.3); border: 1px solid #C2532F; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">Rosario, La Union</span>
+            <span style="background: rgba(194,83,47,0.3); border: 1px solid #C2532F; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;">San Juan, La Union</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" data-screen-label="Gallery" class="container" style="padding-top: clamp(56px,8vw,84px); padding-bottom: clamp(56px,8vw,84px);">
+    <div style="text-align: center; margin-bottom: 14px;">
+      <div style="font-family: Caveat, cursive; font-size: 28px; color: #C2532F;">one polaroid per destination</div>
+      <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px,5vw,44px); margin: 4px 0 0; letter-spacing: -0.5px;">Our Gallery</h2>
+      <p style="font-size: 15px; color: #8A7657; margin: 10px 0 0;">Just drag a photo onto each frame — it saves automatically.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 36px 28px; padding-top: 30px;">
+      <sc-for list="{{ destinations }}" as="d" hint-placeholder-count="11">
+        <figure style="position: relative; margin: 0; background: #fff; padding: 12px 12px 14px; box-shadow: 0 10px 24px rgba(59,45,32,0.18); transform: rotate({{ d.rot }}deg); justify-self: center; width: 100%; max-width: 270px; box-sizing: border-box;" style-hover="transform: rotate(0deg) scale(1.04); box-shadow: 0 16px 36px rgba(59,45,32,0.26); z-index: 5;">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate({{ d.tapeRot }}deg); width: 96px; height: 26px; background: {{ d.tape }}; opacity: 0.85; box-shadow: 0 1px 3px rgba(59,45,32,0.15);"></div>
+          <image-slot id="{{ d.slot }}" shape="rect" placeholder="Drop a photo of {{ d.name }}" style="width: 100%; height: 230px; display: block;"></image-slot>
+          <figcaption style="padding: 12px 4px 2px;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px;">
+              <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 18px;">{{ d.name }}</div>
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #8A7657; white-space: nowrap;">{{ d.province }}</div>
+            </div>
+            <div style="font-family: Caveat, cursive; font-size: 20px; color: #C2532F; margin-top: 2px;">{{ d.caption }}</div>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== STORIES ===== -->
+  <section id="kwento" data-screen-label="Stories" style="background: #fff; border-top: 2px dashed #D8C9A8; border-bottom: 2px dashed #D8C9A8;">
+    <div class="container" style="padding-top: clamp(56px,8vw,84px); padding-bottom: clamp(56px,8vw,84px);">
+      <div style="text-align: center; margin-bottom: 44px;">
+        <div style="font-family: Caveat, cursive; font-size: 28px; color: #C2532F;">from our ride journal</div>
+        <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px,5vw,44px); margin: 4px 0 0; letter-spacing: -0.5px;">Stories from the Road</h2>
+      </div>
+      <div class="row g-4 row-cols-1 row-cols-md-3">
+        <div class="col">
+          <article style="background: #FAF4E6; border: 2px solid #3B2D20; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; height: 100%;" style-hover="transform: translateY(-4px); box-shadow: 0 12px 28px rgba(59,45,32,0.18);">
+            <image-slot id="kwento-1" shape="rect" placeholder="Photo from your first long ride" style="width: 100%; height: 180px; display: block;"></image-slot>
+            <div style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+              <div style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #7B5FA3;">Bulacan · 2025</div>
+              <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; margin: 0;">Our very first getaway</h3>
+              <p style="font-size: 15px; line-height: 1.65; margin: 0; color: #5C4B36; text-wrap: pretty;">The bike was brand new and we were both nervous. But by the first coffee stop, we already knew — this was going to be our weekend routine from now on.</p>
+              <div style="font-family: Caveat, cursive; font-size: 19px; color: #C2532F; margin-top: auto;">— replace this with your real story ✎</div>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article style="background: #FAF4E6; border: 2px solid #3B2D20; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; height: 100%;" style-hover="transform: translateY(-4px); box-shadow: 0 12px 28px rgba(59,45,32,0.18);">
+            <image-slot id="kwento-2" shape="rect" placeholder="Photo from Marilaque–Infanta" style="width: 100%; height: 180px; display: block;"></image-slot>
+            <div style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+              <div style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #2F6F5E;">Marilaque–Infanta · 2025</div>
+              <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; margin: 0;">To the end of the twisties</h3>
+              <p style="font-size: 15px; line-height: 1.65; margin: 0; color: #5C4B36; text-wrap: pretty;">Curve after curve, clouds on both sides of the road — then suddenly the sea opens up below as you descend into Infanta. The kind of ride that makes you smile inside your helmet.</p>
+              <div style="font-family: Caveat, cursive; font-size: 19px; color: #C2532F; margin-top: auto;">— replace this with your real story ✎</div>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article style="background: #FAF4E6; border: 2px solid #3B2D20; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; height: 100%;" style-hover="transform: translateY(-4px); box-shadow: 0 12px 28px rgba(59,45,32,0.18);">
+            <image-slot id="kwento-3" shape="rect" placeholder="Photo from a ride up north" style="width: 100%; height: 180px; display: block;"></image-slot>
+            <div style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+              <div style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #C2532F;">Pangasinan &amp; La Union · 2025</div>
+              <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; margin: 0;">3AM departures, northbound</h3>
+              <p style="font-size: 15px; line-height: 1.65; margin: 0; color: #5C4B36; text-wrap: pretty;">Leaving at 3AM, catching the sunrise on the highway, then reaching the sea in Bolinao before noon. Exhausted — but the smiles on the way home made every kilometer worth it.</p>
+              <div style="font-family: Caveat, cursive; font-size: 19px; color: #C2532F; margin-top: auto;">— replace this with your real story ✎</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAVORITE & DREAM ===== -->
+  <section data-screen-label="Favorite and Dream" class="container" style="padding-top: clamp(56px,8vw,84px); padding-bottom: clamp(56px,8vw,84px);">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-7">
+        <div style="position: relative; background: #2F6F5E; color: #FAF4E6; border-radius: 20px; padding: clamp(24px,4vw,36px); display: flex; flex-wrap: wrap; gap: 28px; align-items: center; box-shadow: 8px 8px 0 rgba(59,45,32,0.2); overflow: hidden; height: 100%;">
+          <div style="flex: 1; min-width: 240px;">
+            <div style="font-family: Caveat, cursive; font-size: 26px; color: #F4D58D;">our favorite ride</div>
+            <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px,5vw,40px); margin: 6px 0 14px; letter-spacing: -0.5px;">{{ favoriteRide }}</h2>
+            <p style="font-size: 16px; line-height: 1.7; margin: 0; color: #DCEAE2; text-wrap: pretty;">Whenever someone asks where we've been happiest, this is the instant answer. It's the ride we keep coming back to — the bike never gets tired of it, and neither do we.</p>
+          </div>
+          <figure style="margin: 0; background: #fff; padding: 10px 10px 34px; transform: rotate(3deg); box-shadow: 0 10px 24px rgba(0,0,0,0.3); flex-shrink: 0;">
+            <image-slot id="favorite-photo" shape="rect" placeholder="Photo from our favorite ride ✦" style="width: 200px; height: 200px; display: block;"></image-slot>
+            <figcaption style="font-family: Caveat, cursive; font-size: 19px; text-align: center; margin-top: 6px; color: #3B2D20;">this one!</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div style="background: #fff; border: 3px dashed #C2532F; border-radius: 20px; padding: clamp(28px,4vw,36px); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; height: 100%;">
+          <div style="font-family: Caveat, cursive; font-size: 26px; color: #C2532F;">next on the dream list...</div>
+          <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px,5vw,40px); margin: 0; letter-spacing: -0.5px;">{{ dreamDestination }}</h2>
+          <p style="font-size: 15px; line-height: 1.6; color: #8A7657; margin: 0; max-width: 280px; text-wrap: pretty;">This frame is reserved for the day we finally reach our dream destination.</p>
+          <div style="width: 170px; height: 130px; border: 2px dashed #D8C9A8; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: Caveat, cursive; font-size: 20px; color: #B9A47E; margin-top: 8px; animation: bnsh-bob 3s ease-in-out infinite;">soon ✦</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer data-screen-label="Footer" style="background: #3B2D20; color: #FAF4E6;">
+    <div class="container" style="padding-top: clamp(48px,7vw,64px); padding-bottom: 40px; text-align: center;">
+      <div style="font-family: Caveat, cursive; font-size: clamp(28px,5vw,34px); color: #E2A23B;">follow our journey!</div>
+      <div style="display: flex; justify-content: center; gap: 14px; margin: 24px 0 36px; flex-wrap: wrap;">
+        <a href="https://facebook.com/{{ fbHandle }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #6E5A42; border-radius: 999px; padding: 10px 22px; color: #FAF4E6; text-decoration: none; font-weight: 700; font-size: 14px;" style-hover="background: #C2532F; border-color: #C2532F;">ⓕ Facebook</a>
+        <a href="https://instagram.com/{{ igHandle }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #6E5A42; border-radius: 999px; padding: 10px 22px; color: #FAF4E6; text-decoration: none; font-weight: 700; font-size: 14px;" style-hover="background: #C2532F; border-color: #C2532F;">◉ Instagram</a>
+        <a href="https://tiktok.com/@{{ tiktokHandle }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #6E5A42; border-radius: 999px; padding: 10px 22px; color: #FAF4E6; text-decoration: none; font-weight: 700; font-size: 14px;" style-hover="background: #C2532F; border-color: #C2532F;">♪ TikTok</a>
+      </div>
+      <div style="border-top: 1px dashed #6E5A42; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
+        <div style="font-size: 13px; color: #B9A47E;">Byahe ni Shane at Hazel · Honda ADV 160 · since 2025</div>
+        <div style="font-family: Caveat, cursive; font-size: 20px; color: #B9A47E;">until the next ride ✦</div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;totalKm&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;3,000+&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;favoriteRide&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Bolinao&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;dreamDestination&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Ilocos&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;fbHandle&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;byahenishaneathazel&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;igHandle&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;byahenishaneathazel&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;tiktokHandle&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;byahenishaneathazel&quot;, &quot;tsType&quot;: &quot;string&quot; }
+}">
+class Component extends DCLogic {
+  state = { vb: [30, 30, 350, 560], selected: null };
+
+  componentWillUnmount() { if (this._raf) cancelAnimationFrame(this._raf); }
+
+  animateTo(target) {
+    const start = this.state.vb.slice();
+    const t0 = performance.now();
+    const dur = 350;
+    const step = (now) => {
+      const k = Math.min(1, (now - t0) / dur);
+      const e = 1 - Math.pow(1 - k, 3);
+      const cur = start.map((s, i) => s + (target[i] - s) * e);
+      this.setState({ vb: cur });
+      if (k < 1) this._raf = requestAnimationFrame(step);
+    };
+    if (this._raf) cancelAnimationFrame(this._raf);
+    this._raf = requestAnimationFrame(step);
+  }
+
+  zoom(factor) {
+    const [x, y, w, h] = this.state.vb;
+    const nw = Math.min(560, Math.max(80, w * factor));
+    const nh = nw * (h / w);
+    const nx = x + (w - nw) / 2;
+    const ny = y + (h - nh) / 2;
+    this.animateTo([nx, ny, nw, nh]);
+  }
+
+  onDown(e) {
+    this._drag = { x: e.clientX, y: e.clientY, vb: this.state.vb.slice() };
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {}
+  }
+  onMove(e) {
+    if (!this._drag) return;
+    const r = this._svg ? this._svg.getBoundingClientRect() : null;
+    if (!r) return;
+    const [x, y, w, h] = this._drag.vb;
+    const dx = (e.clientX - this._drag.x) * (w / r.width);
+    const dy = (e.clientY - this._drag.y) * (h / r.height);
+    this.setState({ vb: [x - dx, y - dy, w, h] });
+  }
+  onUp() { this._drag = null; }
+
+  renderVals() {
+    const sel = this.state.selected;
+    const base = [
+      { n: 1, slot: "dest-bolinao", name: "Bolinao", province: "Pangasinan", caption: "sunset at Patar!", rot: -2, tape: "#F2B6A0", tapeRot: -3, color: "#C2532F", mx: 152, my: 150 },
+      { n: 2, slot: "dest-dasol", name: "Dasol", province: "Pangasinan", caption: "beach trip!", rot: 1.5, tape: "#BFD8CC", tapeRot: 2, color: "#C2532F", mx: 158, my: 170 },
+      { n: 3, slot: "dest-rosario", name: "Rosario", province: "La Union", caption: "gateway up north", rot: -1, tape: "#F4D58D", tapeRot: -2, color: "#E2A23B", mx: 174, my: 128 },
+      { n: 4, slot: "dest-sanjuan", name: "San Juan", province: "La Union", caption: "Elyu vibes ✦", rot: 2, tape: "#F2B6A0", tapeRot: 3, color: "#E2A23B", mx: 172, my: 110 },
+      { n: 5, slot: "dest-tagaytay", name: "Tagaytay", province: "Cavite", caption: "bulalo + cool breeze", rot: -1.5, tape: "#BFD8CC", tapeRot: -2, color: "#2F6F5E", mx: 192, my: 268 },
+      { n: 6, slot: "dest-marilaque", name: "Marilaque", province: "Rizal", caption: "twisties!!", rot: 1, tape: "#F4D58D", tapeRot: 2, color: "#2F6F5E", mx: 230, my: 238 },
+      { n: 7, slot: "dest-infanta", name: "Infanta", province: "Quezon", caption: "end of Marilaque", rot: -2, tape: "#F2B6A0", tapeRot: -3, color: "#2F6F5E", mx: 248, my: 232 },
+      { n: 8, slot: "dest-drt", name: "DRT", province: "Bulacan", caption: "hidden gem", rot: 1.5, tape: "#BFD8CC", tapeRot: 2, color: "#7B5FA3", mx: 226, my: 212 },
+      { n: 9, slot: "dest-angat", name: "Angat", province: "Bulacan", caption: "chill ride", rot: -1, tape: "#F4D58D", tapeRot: -2, color: "#7B5FA3", mx: 210, my: 226 },
+      { n: 10, slot: "dest-sanrafael", name: "San Rafael", province: "Bulacan", caption: "morning ride", rot: 2, tape: "#F2B6A0", tapeRot: 3, color: "#7B5FA3", mx: 218, my: 204 },
+      { n: 11, slot: "dest-sjdm", name: "SJDM", province: "Bulacan", caption: "close to home ♡", rot: -1.5, tape: "#BFD8CC", tapeRot: -2, color: "#7B5FA3", mx: 202, my: 232 }
+    ];
+    const destinations = base.map((d) => ({
+      ...d,
+      title: d.name + ", " + d.province,
+      textY: d.my + 3,
+      pinR: sel === d.n ? 11 : 7,
+      pinStroke: sel === d.n ? "#3B2D20" : "#fff",
+      pinSW: sel === d.n ? 3 : 2,
+      rowBg: sel === d.n ? "rgba(244,213,141,0.5)" : "transparent",
+      onSelect: () => this.setState({ selected: d.n })
+    }));
+    const selectedDest = destinations.find((d) => d.n === sel) || null;
+    return {
+      destinations,
+      vb: this.state.vb.join(" "),
+      svgRef: (el) => { this._svg = el; },
+      zoomIn: () => this.zoom(0.74),
+      zoomOut: () => this.zoom(1.35),
+      whole: () => { this.setState({ selected: null }); this.animateTo([30, 30, 350, 560]); },
+      focusLuzon: () => this.animateTo([130, 45, 180, 270]),
+      onDown: (e) => this.onDown(e),
+      onMove: (e) => this.onMove(e),
+      onUp: () => this.onUp(),
+      hasSel: !!selectedDest,
+      selectedDest,
+      closeInfo: () => this.setState({ selected: null }),
+      totalKm: this.props.totalKm ?? "3,000+",
+      favoriteRide: this.props.favoriteRide ?? "Bolinao",
+      dreamDestination: this.props.dreamDestination ?? "Ilocos",
+      fbHandle: this.props.fbHandle ?? "byahenishaneathazel",
+      igHandle: this.props.igHandle ?? "byahenishaneathazel",
+      tiktokHandle: this.props.tiktokHandle ?? "byahenishaneathazel"
+    };
+  }
+}
+</script>
+</body>
+</html>
